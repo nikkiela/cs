@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+	<head>
+		<title>Bonus!!</title>
+		<style>
+			* {
+				text-align: center;
+			}
+			body {
+				background-image: url(bg/bg2.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			* {
+				color: rgb(236, 132, 84);
+			}
+			h3 {
+				margin-left: 60px;
+				margin-right: 60px;
+				border: 8px solid white;
+				background-color: white;
+				border-radius: 15px;
+			}
+			#con {
+				visibility: hidden;
+				margin-left: 60px;
+				margin-right: 60px;
+				border: 8px solid white;
+				background-color: white;
+				border-radius: 15px;
+			}
+		</style>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="prompt box/dialog.css">
+		<script src="prompt box/dialog.js">
+		</script>
+		<script>
+		function bonus(val){
+			if (val=="Dattebayo" || val=="DATTEBAYO") {
+				document.getElementById('con').style.visibility = "visible";
+				document.getElementById('bt').style.visibility = "hidden";
+			}
+			else if (val=="dattebayo" || val=="dattebayou") {
+				document.getElementById('con').style.visibility = "visible";
+				document.getElementById('bt').style.visibility = "hidden";
+			}
+			else if (val=="Dattebayou") {
+				document.getElementById('con').style.visibility = "visible";
+				document.getElementById('bt').style.visibility = "hidden";
+			}
+			else {
+				document.getElementById('txt').innerHTML = "Not quite🤔 Try again🤠";
+				document.getElementById('con').style.visibility = "hidden";
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<img src="bns.png" height="228" width="622">
+		<h3 id="txt">Write down the first letter of the last names of each character and connect the letters respectively. The connected letters will lead you to a clue on what the bonus word is. If you answer and type the correct answer below, you will get a surprise!!! Whatchu waitin' for? Play the game to get that prize:D </h3>
+		<script>
+		</script><br><br>
+		<br>
+		<div id="dialogoverlay"></div>
+		<div id="dialogbox">
+		<div>
+		<div id="dialogboxhead"></div>
+		<div id="dialogboxbody"></div>
+		<div id="dialogboxfoot"></div>
+		</div>
+		</div>
+<button id="bt" onclick="Prompt.render('Type some text:','bonus')">Press me if you're ready to answer!</button>
+		<br><br>
+		<a href = "bonus/DATTEBAYO.html" id="con">Press me to get your prize:D</a><br><br>
+		<a href="Menu.html" class = "btmb">🍶Back to Menu🍶</a>
+	</body>
+</html> 

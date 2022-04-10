@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="dialog.css">
+<script src="dialog.js"></script>
+<script>
+function changeText(val){
+	if (val=="c" || val=="C") {
+		document.getElementById('status').innerHTML = "Correct!";
+	}
+	else if (val=="a" || val=="A") {
+		document.getElementById('status').innerHTML = "Incorrect! It's actually 'a':>";
+	}
+	else if (val=="b" || val=="B") {
+		document.getElementById('status').innerHTML = "Incorrect! It's actually 'a':>";
+	}
+	else {
+		document.getElementById('status').innerHTML = "Can't be identified! It's actually 'a':>";
+	}
+}
+
+</script>
+<style>
+	body {
+		background-color: rgb(232, 216, 172);
+	}
+	* {
+		text-align: center;
+		color: brown;
+	}
+</style>
+</head>
+<body>
+<div id="dialogoverlay"></div>
+<div id="dialogbox">
+  <div>
+    <div id="dialogboxhead"></div>
+    <div id="dialogboxbody"></div>
+    <div id="dialogboxfoot"></div>
+  </div>
+</div>
+<h2 id="status">What's your answer?</h2>
+<button onclick="Prompt.render('Type some text:','changeText')">Press me if you're ready to answer!</button>
+</body>
+</html>

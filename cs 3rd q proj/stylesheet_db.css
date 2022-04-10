@@ -1,0 +1,23 @@
+#dialogoverlay{
+	display:none;
+	background:#FFF;
+	opacity:0.8;
+	width:100%;
+	top:0px;
+	left:0px;
+	position:fixed;
+	z-index:10;
+}
+
+#dialogbox{
+	display:none;
+	position:fixed;
+	background:#000;
+	width:550px;
+	z-index:10;
+	border-radius:7px;
+}
+#dialogbox > div {background:#ffffff; margin:8px;}
+#dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
+#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }

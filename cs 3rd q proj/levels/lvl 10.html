@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+	<head>
+		<title>Lvl. 10</title>
+		<style>
+			* {
+				color: rgb(57, 24, 8);
+				text-align: center;
+			}
+			body {
+				background-image: url(../bg/bg8.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			img {
+				border-radius: 15px;
+				display: inline;
+				float: center;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: auto;
+				display: block;
+			}
+			h1 {
+				font-family: courier new; 
+				color: rgb(57, 24, 8);
+			}
+			.btlb {
+				color: white;
+			}
+			h2 {
+				color: white;
+			}
+			#con {
+				visibility: hidden;
+				margin-left: 60px;
+				margin-right: 60px;
+				border: 8px solid white;
+				background-color: white;
+				border-radius: 15px;
+			}
+		</style>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../prompt box/dialog.css">
+		<script src="../prompt box/dialog.js">
+		</script>
+		<script>
+		function changeText(val){
+			if (val=="b" || val=="B") {
+				document.getElementById('status').innerHTML = "Correct!";
+				document.getElementById('con').style.visibility = "visible";
+				document.getElementById('bt').style.visibility = "hidden";
+			}
+			else if (val=="a" || val=="A") {
+				document.getElementById('status').innerHTML = "Incorrect! It's actually 'a':>";
+				document.getElementById('con').style.visibility = "visible";
+				document.getElementById('bt').style.visibility = "hidden";
+			}
+			else if (val=="c" || val=="C") {
+				document.getElementById('status').innerHTML = "Incorrect! It's actually 'a':>";
+				document.getElementById('con').style.visibility = "visible";
+				document.getElementById('bt').style.visibility = "hidden";
+			}
+			else {
+				document.getElementById('status').innerHTML = "Can't be identified! It's actually 'a':>";
+				document.getElementById('con').style.visibility = "visible";
+				document.getElementById('bt').style.visibility = "hidden";
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<h1> LEVEL 10</h1>
+		<h2 id="status">What's your answer?</h2>
+		<a href = "lvl 11.html" id="con">Let's go to the next level!!</a><br><br>
+		<div id="dialogoverlay"></div>
+		<div id="dialogbox">
+		<div>
+		<div id="dialogboxhead"></div>
+		<div id="dialogboxbody"></div>
+		<div id="dialogboxfoot"></div>
+		</div>
+		</div>
+<button id="bt" onclick="Prompt.render('Type some text:','changeText')">Press me if you're ready to answer!</button>
+		<br><br>
+		<img src="../characters/KT.png" height="483" width="376"><br><br>
+		<a href="../Game lobby.html" class = "btlb">🍶Back to Lobby🍶</a>
+		<script>
+		</script>
+	</body>
+</html>
